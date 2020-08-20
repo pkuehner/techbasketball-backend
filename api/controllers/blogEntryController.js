@@ -3,6 +3,8 @@
 const mongoose = require('mongoose'),
 Entry = mongoose.model('BlogEntries');
 
+
+
 exports.listAll = function(req, res) {
     Entry.find({}, function(err, entry) {
     if (err)
@@ -12,13 +14,14 @@ exports.listAll = function(req, res) {
 };
 
 exports.create = function(req, res) {
-    console.log(req.body);
-  var new_entry = new Entry(req.body);
-  new_entry.save(function(err, entry) {
-    if (err)
-      res.send(err);
-    res.json(entry);
-  });
+
+      var new_entry = new Entry(req.body);
+      new_entry.save(function (err, entry) {
+          if (err)
+              res.send(err);
+          res.json(entry);
+      });
+
 };
 
 exports.read = function(req, res) {
