@@ -17,7 +17,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 var corsOptions = {
-    origin: ['http://localhost:80', 'http://ec2-100-25-46-122.compute-1.amazonaws.com:80', 'http://tech-basketball.live:80', 'http://54.80.212.148:80'],
+    origin: ['http://localhost:4200', 'http://ec2-100-25-46-122.compute-1.amazonaws.com:4200', 'http://tech-basketball.live:4200', 'http://54.80.212.148:4200'],
     credentials: true,
 };
 app.use(cors(corsOptions)); //enable cors on all requests
