@@ -17,7 +17,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 var corsOptions = {
-    origin: 'http://localhost:4200',
+    origin: ['http://localhost:4200', 'http://ec2-100-25-46-122.compute-1.amazonaws.com:4200'],
     credentials: true,
 };
 app.use(cors(corsOptions)); //enable cors on all requests
