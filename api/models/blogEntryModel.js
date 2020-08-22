@@ -19,7 +19,10 @@ const BlogEntrySchema = new Schema({
         type: Date,
         default: Date.now
     },
-    file: String,
+    file: {
+        type: [String],
+        default: []
+    },
     status: {
         type: [{
           type: String,
