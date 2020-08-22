@@ -15,6 +15,10 @@ const BlogEntrySchema = new Schema({
         type: String,
         required: 'author name required'
     },
+    preview: {
+        type: String,
+        default: ''
+    },
     Created_date: {
         type: Date,
         default: Date.now

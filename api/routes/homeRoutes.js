@@ -16,7 +16,7 @@ const sendMail = (user, callback) => {
         from: user.name + ' ' + user.mail,
         to: `passuu96@googlemail.com`,
         subject: "Message from Basketball Blog",
-        html: user.message + '\n Phone:' + user.phone
+        html: user.message + '\n Phone:' + user.phone + user.mail
     };
 
     transporter.sendMail(mailOptions, callback);
